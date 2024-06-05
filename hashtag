@@ -1,0 +1,15 @@
+import urllib.parse
+import webbrowser
+
+message = "\n\nkeyword\n#hashtag"
+
+encoded_message = urllib.parse.quote_plus(message)
+
+twitter_base_url = "https:\\twitter.com\intent\tweet?text="
+
+tweet_link = twitter_base_url + encoded_message
+
+print("Here is your twitter link: ")
+print(tweet_link)
+
+webbrowser.open(tweet_link)
